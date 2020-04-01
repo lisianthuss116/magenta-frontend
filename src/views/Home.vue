@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <pre>{{users}}</pre>
+  <div class="tw-container tw-mx-auto">
+    <h1 class="tw-text-6xl tw-text-purple-500">Hello</h1>
   </div>
 </template>
 
@@ -9,21 +9,8 @@ export default {
   name: "Home",
   data() {
     return {
-      users: []
+      //
     };
-  },
-  async created() {
-    await this.getUsers();
-  },
-  methods: {
-    async getUsers() {
-      const response = await this.$axios({
-        method: "GET",
-        url: "/users"
-      });
-
-      this.users = response.data.docs;
-    }
   }
 };
 </script>
